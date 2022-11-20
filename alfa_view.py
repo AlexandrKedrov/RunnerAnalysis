@@ -1,5 +1,5 @@
-from PyQt5 import QtCore, QtWidgets
-from PyQt5.QtWidgets import QFileDialog, QMessageBox
+from PySide2 import QtCore, QtWidgets
+from PySide2.QtWidgets import QFileDialog, QMessageBox
 from extractors.BaseExtractor import Detector
 import cv2
 from deartifacter import deartifacter
@@ -52,7 +52,7 @@ class Ui_MainWindow(object):
         self.pushButton.clicked.connect(self.btn)
         self.pushButton1.clicked.connect(self.btn1)
 
-    @QtCore.pyqtSlot()
+    @QtCore.Slot()
     def path(self):
         fname = QFileDialog.getOpenFileName()[0]
         return fname
