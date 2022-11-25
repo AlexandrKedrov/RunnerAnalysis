@@ -1,5 +1,5 @@
-from PySide2 import QtCore, QtWidgets
-from PySide2.QtWidgets import QFileDialog, QMessageBox
+from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtWidgets import QFileDialog, QMessageBox
 from extractors.BaseExtractor import Detector
 import cv2
 from deartifacter import deartifacter
@@ -142,7 +142,7 @@ class Ui_MainWindow(object):
             cap = cv2.VideoCapture(
                 self.file1[0:len(self.file1)-4:1] + "_clip" + ".mp4")
             det = Detector(cap, self.file1[0:len(
-                self.file1)-3:1] + "json", is_file=True)
+                self.file1)-3:1] + "json", is_file=True, show_res=True)
             det.run()
             self.have1 = True
         except Exception:

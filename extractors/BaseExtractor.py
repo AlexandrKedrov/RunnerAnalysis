@@ -69,7 +69,7 @@ class Detector(object):
                     self.construct_state(results.pose_landmarks.landmark)
                 if self.show_res:
                     image.flags.writeable = True
-                    image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
+                    # image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
                     mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
                     cv2.imshow('Result', cv2.flip(image, 1))
                     self.vid_writer.write(image)
