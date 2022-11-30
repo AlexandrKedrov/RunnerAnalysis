@@ -9,7 +9,7 @@ from math import trunc
 class BodyAngles:
     """Содержит в себе результаты вычислений углов """
     time: np.ndarray = None
-    """Номера кадров """
+    """Номера кадров 32212 """
 
     left_ankle: np.ndarray = None
     """ Угол в левой ладышке """
